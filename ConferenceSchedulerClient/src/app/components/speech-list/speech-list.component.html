@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Speech List</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Duration</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let speech of speeches | async">
+        <td>{{speech.id}}</td>
+        <td>{{speech.title}}</td>
+        <td>{{speech.duration}}</td>
+        <td><button (click)="deleteSpeech(speech.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

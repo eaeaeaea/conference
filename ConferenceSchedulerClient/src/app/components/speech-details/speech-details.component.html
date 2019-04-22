@@ -1,0 +1,14 @@
+<div *ngIf="speech">
+  <div>
+    <label>Name: </label> {{speech.firstName}}
+  </div>
+  <div>
+    <label>Age: </label> {{speech.lastName}}
+  </div>
+
+  <span class="button is-small btn-primary" (click)='updateActive(true)'>Active</span>
+
+  <span class="button is-small btn-danger" (click)='deleteSpeech()'>Delete</span>
+
+  <hr/>
+</div>

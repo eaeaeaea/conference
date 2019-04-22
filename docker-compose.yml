@@ -1,0 +1,12 @@
+version: '2'
+services:
+  conference-fe:
+    build: ConferenceSchedulerClient/.
+    ports:
+      - "8081:8081"
+    depends_on:
+      - conference-ba
+  conference-ba:
+    build: ConferenceSchedulerServer/.
+    ports: 
+      - "8080:8080"
